@@ -11,7 +11,7 @@ For state, we can enum State as Moving or Rest. Upon implementing this, and inst
 
 Upon, which we realize we want to see some instance of Lift, and hence, run with next:
 ```
-run{some Lift}
+run{one Lift}
 ```
 ![Alloy_Diagram](4_init_Lift_sig_2.png)
 
