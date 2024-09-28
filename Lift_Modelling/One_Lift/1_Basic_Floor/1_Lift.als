@@ -29,7 +29,7 @@ sig Zero extends Bottom_Floor {}
 sig First extends Middle_Floor {}
 sig Second extends Top_Floor {}
 
-fact value {
+fact basic_constraints {
 	Zero.value = 0
 	First.value = 1
 	Second.value = 2
