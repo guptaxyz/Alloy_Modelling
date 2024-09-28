@@ -15,4 +15,4 @@ run{some Lift}
 ```
 ![Alloy_Diagram](4_init_Lift_sig_2.png)
 
-This is consistent with what we expected, and hence, can move forward.
+This is consistent with what we expected.
