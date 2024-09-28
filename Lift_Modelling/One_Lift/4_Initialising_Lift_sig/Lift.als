@@ -48,4 +48,4 @@ fact basic_constraints {
 	Bottom_Floor.up != Invalid
 }
 
-run{some Lift}
+run{one Lift}
