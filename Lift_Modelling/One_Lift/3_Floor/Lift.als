@@ -25,8 +25,12 @@ fact basic_constraints {
 	Zero.value = 0
 	First.value = 1
 	Second.value = 2
+
+	// Invalidating the floor buttons
 	Top_Floor.up = Invalid
 	Bottom_Floor.down = Invalid
+	
+	// Adding constraints for the floor buttons which should always be pressable
 	Middle_Floor.up != Invalid
 	Middle_Floor.down != Invalid
 	Top_Floor.down != Invalid
