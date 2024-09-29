@@ -25,7 +25,7 @@ run{} for 1 State, 1 Lift, exactly 4 Floor
 ![Alloy Output](8_Ordering_Lift_2.png) <br>
 A problem is spotted:
 - Second0 state is existing on it's own which shouldn't be the case. A floor should only exist when it's mapped from something  ~ **#NEEDTOFIX - 1**<br> 
-**Probable cause:** Haven't constrained that the floors cannot exist independently
+**Probable cause:** Haven't constrained that the floors cannot exist independently.<br>
 Rest of the instance seems consistent. </p>
 
 3. <p>
