@@ -12,7 +12,9 @@ Upon executing with run command - `run{} for 2 State, 2 Lift, exactly 5 Floor`, 
 
 ![Alloy_States](10_Ordering_Lift_1.png)
 
-This solves the problem NEEDTOFIX-2, however, we can notice another problem here, which we missed earlier (possibly as we didn't check after implementing 2 states), that the Invalid is being pointed by multiple floor buttons, even the ones which should be pressable.
+This solves the problem NEEDTOFIX-2.
+
+However, we can notice **another problem** here, which we missed earlier (possibly as we didn't check after extending for 2 states), that the Invalid is being pointed by multiple floor buttons, even the ones which should be pressable.
 
 **Probable cause:** When we use the below snippet for invalidating and rejecting, the ones for rejecting invalidation, are implicitly only constraining atleast one such Bottom_Floor, Middle_Floor, Top_Floor to follow them, and thereby causing this problem, when multiple states of a type of floor are present.
 ```
