@@ -22,21 +22,21 @@ No Instance, as a State can have max 3 Floors</p>
 ```
 run{} for 2 State, 1 Lift, exactly 4 Floor
 ```
-![Alloy Output](12_Ordering_Lift_1.png) <br>
+![Alloy Output](12_Ordering_Lift_0.png) <br>
 The above seems consistent with what we wanted. </p>
 
 3. <p>
 ```
 run{} for 2 State, 2 Lift, exactly 4 Floor
 ```
-![Alloy Output](12_Ordering_Lift_2.png) <br>
+![Alloy Output](12_Ordering_Lift_1.png) <br>
 The above seems consistent with what we wanted. </p> 
 
 4. <p>
 ```
 run{} for 2 State, 2 Lift, exactly 6 Floor
 ```
-![Alloy Output](12_Ordering_Lift_3.png) <br>
+![Alloy Output](12_Ordering_Lift_2.png) <br>
 The above seems consistent with what we wanted. </p> 
 
 5. <p>
