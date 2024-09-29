@@ -5,7 +5,7 @@ enum Door { Open, Close }
 enum Button { Pressed, Not_Pressed, Invalid}
 
 // Considering that the Lift  can either be at Rest or Moving
-enum State { Rest, Moving }
+enum Status { Rest, Moving }
 // Considering that the Lift's direction can be up or down
 enum Dirc { Up, Down }
 
@@ -29,7 +29,7 @@ sig Second extends Top_Floor {}
 // Initialising the Lift sig
 sig Lift {
 	floor: one Floor,                           // necessary to store to determine the doors, lift movement
-	state: one State,                           // tells about whether the lift is moving or not
+	status: one Status,                         // tells about whether the lift is moving or not
 	dirc: one Dirc,                             // tells about the inherent direction of motion of the lift
 	pressed_buttons: set Floor                  // store the pressed_buttons inside the lift
 }
