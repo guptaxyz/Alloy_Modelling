@@ -49,7 +49,7 @@ One new problem is spotted:
 </p> 
 
 Additionally, on observing we notice that both the states are pointing to the same three floors only. This is the case with rest of the instances as well, however they should pt. to three floors of type Zero, One, Two, but those may not necessarily be the same ones.
-Hence, this approach to fixing this doesn't work.
+Hence, this approach to _**fixing this doesn't work**_.
 ```
     all s: State | #s.floors = 3 and
     some f1:Zero | f1 in s.floors and
