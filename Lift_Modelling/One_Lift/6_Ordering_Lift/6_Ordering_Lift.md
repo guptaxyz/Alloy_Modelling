@@ -8,7 +8,17 @@ where, we declare "State" to be used to define the information we want to store 
 
 Then, we initialise the defination of "State" with a lift (since, single-lift system) and a set of all the floors.
 Upon executing after initialising and modifying run{}, we get such satisfiable instances:
+
 ![Alloy_Diagram](6_Ordering_Lift_1.png)
 ![Alloy_Diagram](6_Ordering_Lift_2.png)
 
-### Problem:
+Upon observing the satisfiable instances, we see multiple problems
+
+### Problems:
+
+We analyze multiple problems with these:
+
+- Floors stored within a State: <br>
+State.floors should be a complete set of exactly the three current floors and neither less nor more floors
+- Mapping of lift: <br>
+Each Lift sig instance to exist should be mapped to a State 
