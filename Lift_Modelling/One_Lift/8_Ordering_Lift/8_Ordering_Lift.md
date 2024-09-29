@@ -48,13 +48,13 @@ One new problem is spotted:
 **Probable cause:** Haven't constrained that the floor at which lift is must pt. to a floor which is mapped from the parent state of the lift
 </p> 
 
-Additionally, on observing we notice that both the states are pointing to the same three floors only. This is the case with rest of the instances as well, however they should pt. to three floors of type Zero, One, Two, but those may not necessarily be the same ones.
-Hence, this approach to _**fixing this doesn't work**_.
+Additionally, on observing we notice that both the states are pointing to the same three floors only. This is the case with rest of the instances we observed as well, however they should pt. to three floors of type Zero, One, Two, but those may not necessarily be the same ones.
+Hence, this approach to _**fixing, doesn't necessarily work**_. 
 ```
     all s: State | #s.floors = 3 and
     some f1:Zero | f1 in s.floors and
     some f2:First | f2 in s.floors and
     some f3:Second | f3 in s.floors
 ```
-**Probable cause:** Alloy reads _"some f1:Zero | f1 in s.floors"_ as, there should be some unique f1 state of type Zero which is mapped as the floors of all the States. This constrains it to map all the States to the same three floors, if they can exist.
 
+We shall try to analyze this in more depth, after fixing all the NEEDTOFIXs. In the meanwhile, we shall comment this part and move forward.
