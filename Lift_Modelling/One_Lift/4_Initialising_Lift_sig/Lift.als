@@ -5,7 +5,7 @@ enum Door { Open, Close }
 enum Button { Pressed, Not_Pressed, Invalid}
 
 // Considering that the Lift  can either be at Rest or Moving
-enum State { Rest, Moving }
+enum Status { Rest, Moving }
 
 
 // Adding abstract sigs of floors - Basic structure:
@@ -13,7 +13,7 @@ enum State { Rest, Moving }
 abstract sig Floor {
 	door: one Door,
 	value: Int,                   // added to be able to define ordering within floors
-	up: one Button,        // two directions of buttons possible for the floors - up or down
+	up: one Button,               // two directions of buttons possible for the floors - up or down
 	down: one Button
 }
 
@@ -28,8 +28,8 @@ sig Second extends Top_Floor {}
 // Initialising the Lift sig
 sig Lift {
 	floor: one Floor,                            // necessary to store to determine the doors, lift movement
-	state: one State,                           // tells about whether the lift is moving or not
-	pressed_buttons: set Floor                  // store the pressed_buttons inside the lift
+	status: one Status,                          // tells about whether the lift is moving or not
+	pressed_buttons: set Floor                   // store the pressed_buttons inside the lift
 }
 
 fact basic_constraints {
