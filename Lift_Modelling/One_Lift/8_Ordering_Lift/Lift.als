@@ -64,7 +64,10 @@ fact state_constraints {
 	all l: Lift | ( some s: State | l in s.lift )
 
 	// constraining the s.floors to be equal to the set of all 3 floor states
-	all s: State | #s.floors = 3 and  some f1:Zero | f1 in s.floors and some f2:First | f2 in s.floors and  some f3:Second | f3 in s.floors
+	all s: State | #s.floors = 3 and  
+	some f1:Zero | f1 in s.floors and 
+	some f2:First | f2 in s.floors and  
+	some f3:Second | f3 in s.floors
 }
 
 run{} for 1 State, 1 Lift, exactly 3 Floor 
