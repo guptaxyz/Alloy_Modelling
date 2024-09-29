@@ -9,7 +9,7 @@ For this we can simply add a fact constraining this :
 	all s: State | (s.lift.floor in s.floors)
 ```
 
-Upon executing with run command - `run{} for 1 State, 1 Lift, exactly 4 Floor`, we get:
+Upon executing with run command - `run{} for 2 State, 2 Lift, exactly 4 Floor`, we get:
 
 ![Alloy_States](11_Ordering_Lift.png)
 
