@@ -69,6 +69,7 @@ fact state_constraints {
 	// constraining that for all states, the pressed_buttons within the state.lift must point to floors within state.floors
 	all s: State | (all p: s.lift.pressed_buttons | p in s.floors)
 /*
+	// Tackle later
 	// constraining the s.floors to be equal to the set of all 3 floor states
 	all s: State | #s.floors = 3 and  
 	some f1:Zero | f1 in s.floors and 
