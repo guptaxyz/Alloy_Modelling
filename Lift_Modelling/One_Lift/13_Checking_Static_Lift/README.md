@@ -21,10 +21,19 @@ Now, we shall run this for multiple conditions:
    - lift: can be on any one of the 3 floors (3), also the pressed_buttons can be any subset of the 3 floors (2^3 = 8), can have one of the two dirc (2), one of the two status (2) - 3\*8\*2\*2 = 96
    - floors: each floor can have the door open or closed (2^3 = 8), have two dircn of functioning buttons with pressed, not_pressed (however, only 4 buttons working = 2^4 = 16) - 8\*16 = 128
    Hence, the no. of possible instances logically are = 1\*96\*128 = 12288
-   And upon running the script, we get:
-   [3floor](3floor.png)
+   And upon running the script, we get:<br>
+   ![1lift](3floor.png)<br>
    We can see that implemented instances (12288) = logical instances (12288)
-   
-   
-3. 
+     
+2. `run{} for exactly 2 State, exactly 2 Lift, exactly 3 Floor` <br>
+   Logically,
+   - state: shall have the lift (2), the 3 floors (1) - 2
+   - lift: can be on any one of the 3 floors (3), also the pressed_buttons can be any subset of the 3 floors (2^3 = 8), can have one of the two dirc (2), one of the two status (2) - (3\*8\*2\*2)^2 (since two lifts) = 96^2 = 9216
+   - floors: each floor can have the door open or closed (2^3 = 8), have two dircn of functioning buttons with pressed, not_pressed (however, only 4 buttons working = 2^4 = 16) - 8\*16 = 128
+   Hence, the no. of possible instances logically are = 1\*9216\*128 = 1179648
+   And upon running the script, we get:<br>
+   ![2lift](3floor.png)<br>
+   We can see that implemented instances (12288) = logical instances (12288)
+
+Thereby, we can conclude that the static states modelling of the lift is complete.
  
