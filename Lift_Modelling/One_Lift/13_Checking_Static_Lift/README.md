@@ -16,6 +16,15 @@ java -cp .:alloy4.2_2015-02-22.jar AlloyInstanceCounter
 Now, we shall run this for multiple conditions:
 
 1. `run{} for 1 State, 1 Lift, 3 Floor` <br>
+   Logically,
+   - state: shall have the lift, the 3 floors (1) - 1
+   - lift: can be on any one of the 3 floors (3), also the pressed_buttons can be any subset of the 3 floors (2^3 = 8), can have one of the two dirc (2), one of the two status (2) - 3\*8\*2\*2 = 96
+   - floors: each floor can have the door open or closed (2^3 = 8), have two dircn of functioning buttons with pressed, not_pressed (however, only 4 buttons working = 2^4 = 16) - 8\*16 = 128
+   Hence, the no. of possible instances logically are = 1\*96\*128 = 12288
+   And upon running the script, we get:
+   [3floor](3floor.png)
+   We can see that implemented instances (12288) = logical instances (12288)
    
-2. 
+   
+3. 
  
