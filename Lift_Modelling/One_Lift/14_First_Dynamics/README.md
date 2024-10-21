@@ -21,6 +21,6 @@ Using these we initialise the Lifts to be at the zeroth floor, at rest, with no 
 pressable buttons to be at the Not_Pressed state. <br>
 Upon executing we get instances of the form:
 
-![Alloy_States](13_First_Dynamics.png)
+![Alloy_States](image.png)
 
 Looking at the above image, we can clearly say, that the first state carries all the properties we intended and has been initialised.
