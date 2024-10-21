@@ -10,7 +10,7 @@ public class AlloyInstanceCounter {
 
         System.out.println("Parsing the Alloy model...");
 
-        String alloyModelPath = "recent.als"; 
+        String alloyModelPath = "Lift.als"; 
         CompModule world = CompUtil.parseEverything_fromFile(null, null, alloyModelPath);
 
         Command command = world.getAllCommands().get(0);
