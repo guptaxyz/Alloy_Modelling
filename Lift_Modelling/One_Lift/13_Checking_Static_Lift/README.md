@@ -32,7 +32,7 @@ Now, we shall run this for multiple conditions:
    - floors: each floor can have the door open or closed (2^3 = 8), have two dircn of functioning buttons with pressed, not_pressed (however, only 4 buttons working = 2^4 = 16) - 8\*16 = 128
    Hence, the no. of possible instances logically are = 1\*96\*128 = 12288
    And upon running the script, we get:<br>
-   ![1lift](2lift.png)<br>
+   ![2lift](2Lift.png)<br>
    We can see that implemented instances (12288) = logical instances (12288)
 
 Thereby, we can conclude that the static states modelling of the lift is complete.
