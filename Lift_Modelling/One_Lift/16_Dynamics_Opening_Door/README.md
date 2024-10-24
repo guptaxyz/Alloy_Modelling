@@ -12,6 +12,6 @@ if ( s.lift.floor.door = Open and s1.lift.floor.door = Close ):
   - must update only this floor linked with the state 
 ```
 
-Upon modelling this as can be seen in ![old_Lift.als](old_Lift.als), and simulating for satisfiable instance we get:
+Upon modelling this as can be seen in [old_Lift.als](old_Lift.als), and simulating for satisfiable instance we get:
 
 ![old](old.png)
