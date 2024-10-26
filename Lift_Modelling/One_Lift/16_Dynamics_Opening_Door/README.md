@@ -18,5 +18,29 @@ Upon modelling this as can be seen in [old_Lift.als](old_Lift.als), and running 
 
 On analyzing this instance, one can notice that in the next state (state1), the doors of Second open, whereas, this shouldn't be happening as the lift isn't on this floor. Looking back at the psuedocode, I realise that, I had only constrained opening of door for the floor on which the lift is and missed the rest of the floors.
 
-Now, I modify the prev, to constrain the opening of doors to only if the lift is at the given floor, as can be found in [Lift.als](Lift.als).
+Now, I modify the prev, to constrain the opening of doors to only if the lift is at the given floor, as can be found in [old_Lift2.als](old_Lift2.als).
 
+```
+    // here s1 = s.next
+    all f, f1: Floor | 
+    ( f in s.floors ) and ( f1 in s1.floors ) and
+    ( f.value = f1.value ) and
+    (( not ( s.lift.floor = f and s1.lift.floor = f1 )) =>
+    ( f.door = Close and f1.door = Close ))
+```
+
+Upon implementing and running this I get, 
+![No_instance](No_instance.png)
+
+On analyzing, I realize that I had wrongly constrained that for any two floors which exist in both s and s.next to have the same values. This is wrong, as we wanted to constrain that for two such floors in s and s.next which had the same value to have the doors closed if the lift isn't at their floor. So to do this, we use implication:
+```
+    // here s1 = s.next
+    all f, f1: Floor | 
+    (( f in s.floors ) and ( f1 in s1.floors ) and
+    ( f.value = f1.value )) =>
+    (( not ( s.lift.floor = f and s1.lift.floor = f1 )) =>
+    ( f.door = Close and f1.door = Close ))
+```
+
+This gives us satisfiable instances, which I further analyze
+![]()
