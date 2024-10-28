@@ -42,5 +42,14 @@ On analyzing, I realize that I had wrongly constrained that for any two floors w
     ( f.door = Close and f1.door = Close ))
 ```
 
-This gives us satisfiable instances, which I further analyze
-![]()
+However, I further modify this, as here our motive is to simply constrain door opening and restrict it to the scenario wherein the lift is at the designated floor. I do this by:
+```
+    all f: s.floors, f1: s1.floors | 
+		( f.door = Close and f1.door = Open and f.value = f1.value) =>
+		( s.lift.floor = f and s1.lift.floor = f1 )
+```
+This gives us the kind of satisfiable instances which we were looking for:
+
+![Correct](new.png)
+
+We can see in the above instance we have the 3rd State having an Open door for the Zeroth floor, only possible as the lift was on Zeroth floor and the pressed_buttons had it. Hence, we have achieved this movement.
