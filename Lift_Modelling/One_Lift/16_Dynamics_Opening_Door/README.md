@@ -42,7 +42,7 @@ On analyzing, I realize that I had wrongly constrained that for any two floors w
     ( f.door = Close and f1.door = Close ))
 ```
 
-However, I further modify this, as here our motive is to simply constrain door opening and restrict it to the scenario wherein the lift is at the designated floor. I do this by:
+However, I further modify this, as here our motive is to simply constrain door opening and restrict it to the scenario wherein the lift is at the designated floor. I do this by ([Lift.als](Lift.als)):
 ```
     all f: s.floors, f1: s1.floors | 
 		( f.door = Close and f1.door = Open and f.value = f1.value) =>
