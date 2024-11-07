@@ -173,7 +173,7 @@ fact close_door {
 		(
 			// lift is at rest and moves in the direction accordingly, before and after opening of door
 			// Will CHANGE this policy of movement
-			s.lift.status = Rest and s1.lift.status = Rest and
+			s.lift.status = Rest and s1.lift.status = Moving and
 			( s.lift.floor.value = 2 => s1.lift.dirc = Down ) and
 			( s.lift.floor.value = 0 => s1.lift.dirc = Up ) and
 			(( s.lift.floor.value != 0 and s.lift.floor.value != 2 ) => s.lift.dirc = s1.lift.dirc ) and
