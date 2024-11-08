@@ -28,4 +28,4 @@ After implementing this [Lift.als](Lift.als), we test the properties via putting
 
 ![image.png](image.png)
 
-Hence, we have succesfully achieved constrains on the status of the lift.
+In the above, we can see that even wothout specifying the door of the Zeroth floor automatically opened, and we also achieved no satisfiable instances when trying to reach first, as it isn't possible within just 3 states, as the lift has to open on the Zeroth floor. <br> Hence, we have succesfully achieved constrains on the status of the lift.
