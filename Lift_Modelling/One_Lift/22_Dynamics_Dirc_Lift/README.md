@@ -76,5 +76,24 @@ State4 : Lift at Zero, Up, Close <br>
 
 Thus, we can clearly see our predicate worked fine as it moved to the ground floor as the dirc at the State1 was Down, however, this dirc change from State0 to State1 shouldn't have occurred. Dirc switches should be limited to door closing only. Thus, we introduce, as new fact dirc_switch{} ![Lift.als](Lift.als).
 
+```
+fact dirc_switch {
+	// to constrain dirc switches only when lift starts moving from rest
+	// or the lift has reached the end topmost or bottommost floor
+	all s: State - last, s1: s.next {
+		( s.lift.dirc != s1.lift.dirc ) =>
+		(( s.lift.status = Rest and s1.lift.status = Moving ) or
+		s1.lift.floor in Zero or s1.lift.floor in Second )
+	}
+}
+```
 
+Upon adding this, now when rerun our simulation, some of the satisfiable instances look like:
 
+![2.png](2.png)
+
+We can notice, that it goes to the Second floor irrespective of both the floors (Zero, Second) having pressed buttons.
+
+Additionally, when we run it after amending the statement as `some s: State - last, s1: s.next | s.lift.floor.door = Open and s1.lift.floor.door = Close and s1.lift.floor in Zero` to constrain the lift to open on Zeroth floor, it gives no satisfiable instances indicating that it isn't possible in just 5 states. However, upon increasing the no. of states, it gives satisfiable instances.
+
+Hence, we have accomplished the dynamics behind changing the dirc, status of the lift. 
