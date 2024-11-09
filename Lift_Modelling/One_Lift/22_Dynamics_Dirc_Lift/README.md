@@ -74,5 +74,7 @@ State2 : Lift moves to Zeroth Floor, Up, Close <br>
 State3 : Lift at Zero, Up, Open <br>
 State4 : Lift at Zero, Up, Close <br>
 
-Thus, we can clearly see our predicate wored fine as the 
+Thus, we can clearly see our predicate worked fine as it moved to the ground floor as the dirc at the State1 was Down, however, this dirc change from State0 to State1 shouldn't have occurred. Dirc switches should be limited to door closing only. Thus, we introduce, as new fact dirc_switch{} ![Lift.als](Lift.als).
+
+
 
