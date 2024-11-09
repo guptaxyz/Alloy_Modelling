@@ -6,7 +6,7 @@ Normally this would also depend on the algorithm we use, however I have for now,
 
 #### Basic Sweep Algorithm:
 
-Basically, as the name suggests, we want to continue in a particular dirc of movement as long as there are floors in that dirc which we need to visit. If there are 
+As the name suggests, we want to continue in a particular dirc of movement as long as there are floors in that dirc which we need to visit. If there are 
 none, we switch the dirc and either continue movement or stop based upon whether there are floors in the new dirc to be reached.
 
 ```
