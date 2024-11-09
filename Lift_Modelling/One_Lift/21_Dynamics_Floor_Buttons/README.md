@@ -15,7 +15,7 @@ if ( f.up = not_pressed and f1.up = pressed and f.value = f1.value ):
     // we don't want to constrain this, as the floor button can be pressed at any time
 ```
 
-Upon implementing this and running with simply 'run{} for exactly 5 State, exactly 5 Lift, exactly 3 Floor' to see the current working of my lift:
+Upon implementing this and running with simply 'run{} for exactly 5 State, exactly 5 Lift, 15 Floor' to see the current working of my lift:
 
 ![1.png](1.png)
 
@@ -41,6 +41,14 @@ fact up {
 ```
 
 Now, in order to accomodate the border case, I replace the statement `s1.lift.dirc = Up` with `(s1.lift.floor.value = 2 => s1.lift.dirc = Down) and (s1.lift.floor.value != 2 => s1.lift.dirc = Up)` and similarly for the fact down{}.
+
+Re-running the newly implemented code, we get:
+
+![2.png](2.png)
+
+Looking at this we can see the direction of the lift changes accordingly at the Second floor, however, we haven't yet tested for the floor_buttons getting pressed and unpressed, so let's for it using:
+
+
 
 
 
