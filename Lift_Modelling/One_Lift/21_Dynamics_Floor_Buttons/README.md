@@ -49,7 +49,7 @@ Re-running the newly implemented code, we get:
 Looking at this we can see the direction of the lift changes accordingly at the Second floor, however, we haven't yet tested for the floor_buttons getting pressed and unpressed, so let's test for it using:
 ```
 	some s: State, f: s.floors | f in First and f.down = Pressed
-    some s: State, f: s.floors | f in Zero and f.up = Pressed
+    	some s: State, f: s.floors | f in Zero and f.up = Pressed
 	some s: State - last, s1: s.next | s.lift.floor.door = Open and s1.lift.floor.door = Close
 ```
 Upon, adding these and running, we get:
