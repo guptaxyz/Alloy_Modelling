@@ -33,6 +33,6 @@ we get no satisfiable instances when ran for 5 states, however upon increasing t
 
 ![image.png](image.png)
 
-As we can see, the lift starts from Rest, the moment a button on Second floor is pressed, the lift transitions to the moving stage in the next state. Then the lift opens, the pressed button gets unpressed and the lift closes.
+As we can see, the lift starts from Rest, the moment a button on Second floor is pressed (State1), the lift transitions to the moving stage in the next state. Then the lift opens, the pressed button gets unpressed and the lift closes.
 
 Looks like we are nearing the end of this basic one lift system :)
