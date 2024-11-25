@@ -1,6 +1,6 @@
 ## Dynamics - Floors of a State
 
-We are almost on the the berge of completing a one lift system, however we are yet to constrain the floors of a state.
+We are almost on the the verge of completing a one lift system, however we are yet to constrain the floors of a state.
 
 I haven't yet talked about how and when should the floors change. Now, when we think about it, we had previously constrained the floors to be 3, and exactly one Zero, First and Second to be there in each state. This time, however we would further want that any two adjacent states can only have different floors state if the floor (either Zero, First or Second) is in essence different, either the buttons or the door.
 
