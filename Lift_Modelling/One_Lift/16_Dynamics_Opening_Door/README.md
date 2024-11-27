@@ -6,11 +6,11 @@ As discussed, I specify the movement and then imply the scenario which must be m
 Keeping this in mind, I note down the pseudocode of criterias which must be met:
 ```
 if ( s.lift.floor.door = Close and s1.lift.floor.door = Open ):
-  - ensure lift is at rest
+	- ensure lift is at rest
 	- moves to the same direction as before and after opening of door
-  - either the floor should be within the pressed_buttons or the floor up/down button should be pressed
-  - the s.lift.floor should essentially remain the same, except for the door
-  - must update only this floor linked with the state 
+	- either the floor should be within the pressed_buttons or the floor up/down button should be pressed
+	- the s.lift.floor should essentially remain the same, except for the door
+	- must update only this floor linked with the state 
 ```
 
 Upon modelling this as can be seen in [old_Lift.als](old_Lift.als), and running the analyzer for satisfiable instance I get:
