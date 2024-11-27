@@ -18,9 +18,21 @@ for all f: s.floors - s1.floors, f1: s1.floors:
 ```
 
 Implementing this, and rerunning, this eems fine, however, I notice another problem - <br> 
+
 When I try to go to first floor from the ground and open doors, starting from Rest, on the basis that only the first floor button is pressed. The lift is going up, however, it won't open doors, and hence, I'm getting no satisfiable instances. <br>
-I'm getting this as I had constrained the lift to open doors only either the floor was in the pressed_buttons of the lift or the lift button in the dirc of the lift is pressed. But here, I realise that the dirc condition stands only if some floors exist above the current one, which need to be visited else should be discarded.
+I'm getting this as I had constrained the lift to open doors only either the floor was in the pressed_buttons of the lift or the lift button in the dirc of the lift is pressed. But here, I realise that the dirc condition stands only if some floors exist above the current one, which need to be visited else should be discarded. <br>
 
 For this I write another predicate which returns True/False, simply based upon a state s, to tell whether to take dirc into consideration:
 ```
+// defined as helper function, to consider the direction of the lift
+pred consider_dirc ( s: State, up_dirc: Int )  {
+	((up_dirc = 1) => some f: s.floors | f.value > s.lift.floor.value and ( f in s.lift.pressed_buttons or f.up = Pressed or f.down = Pressed ))
+	((up_dirc = 0) => some f: s.floors | f.value < s.lift.floor.value and ( f in s.lift.pressed_buttons or f.up = Pressed or f.down = Pressed ))
+}
 ```
+
+Now, implementing this and running I get:
+![image.png](image.png)
+
+This shows, that we have achieved the desired functionality. <br> However, in order to get this, had to change this constrain of lift stopping everywhere in the code and it seemed cumbersome. <br> Hence, realise I should isolate the algorithm and part related to stopping of the lift to trivialise the process.
+
