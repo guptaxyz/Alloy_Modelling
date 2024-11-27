@@ -36,3 +36,5 @@ Now, implementing this and running I get:
 
 This shows, that we have achieved the desired functionality. <br> However, in order to get this, had to change this constrain of lift stopping everywhere in the code and it seemed cumbersome. <br> Hence, realise I should isolate the algorithm and part related to stopping of the lift to trivialise the process.
 
+After final isolating the same, the code can be found in [Lift.als](Lift.als).
+
