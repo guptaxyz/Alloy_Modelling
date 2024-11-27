@@ -1,7 +1,7 @@
 ## Dynamics - Opening Door
 
 In this I try to implement the dynamics of opening of door, building upon previous implementation.
-As discussed, I specify the movement and then imply the scenario which must be met for the movement to occur.
+As discussed, I specify the movement and then imply the scenario which must be met for the movement to occur
 
 Keeping this in mind, I note down the pseudocode of criterias which must be met:
 ```
